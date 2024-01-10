@@ -11,13 +11,13 @@ public class Linkedlist{
     public static Node tail; // jisme head node aaya tail node aaya aur null h
     public static int size;  //by default 0
 public void addFirst(int data){
-    Node newNode = new Node(data); // is step m constructor call hoggaa
-    size++;
-    if(head==null){
+    Node newNode = new Node(data); // is step m constructor call hoggaa aur ek new node m data
+    size++;                        // aur reference dono aayenge aur reference pure k pure next node ko
+    if(head==null){                // point krta h
         head=tail=newNode;
         return;
     }
-    newNode.next = head;
+    newNode.next = head;   //
     head = newNode;
 }
 public void addLast(int data){
